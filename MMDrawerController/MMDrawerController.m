@@ -360,6 +360,7 @@ static NSString *MMDrawerOpenSideKey = @"MMDrawerOpenSide";
             CGFloat distance = ABS(CGRectGetMinX(oldFrame)-newFrame.origin.x);
             NSTimeInterval duration = MAX(distance/ABS(velocity),MMDrawerMinimumAnimationDuration);
             
+            [self updateDrawerVisualStateForDrawerSide:self.openSide percentVisible:0.0];
             [UIView
              animateWithDuration:(animated?duration:0.0)
              delay:0.0
